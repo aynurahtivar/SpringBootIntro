@@ -1,0 +1,13 @@
+
+Spring Security bizim yapilarimizi tanimaz, bu yuzden Spring Securitynin anlayacagi dile ceviriyoruz.
+
+Spring Security'nin kendi UserDetailsService interface'i var, implemente ettik
+- 1 tane methodu var, geriye UserDetails donduren  ----> loadUserByUsername(String username) methodu
+
+
+
+
+** Security ile ilgili configurasyon
+ WebSecurityConfig extends WebSecurityConfigurerAdapter
+
+

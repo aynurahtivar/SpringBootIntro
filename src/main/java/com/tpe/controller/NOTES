@@ -1,0 +1,57 @@
+
+@PostMapping
+    public ResponseEntity<Map<String, String>> createStudent(@Valid @RequestBody Student student)
+
+    POSTMANDE EKLEME ISLEMI
+{
+    "name":"Aynur",
+    "lastName":"Ahtivar",
+    "grade":98,
+    "email":"aynur@ahtivar.com",
+    "phoneNumber":"123456788"
+}
+
+
+
+------------   DTO    (DATA TRANSFER OBJECT)   ----------------
+Client- Service katmani arasindaki kisimda datalarin tasinmasi icin olusturulmus objelerdir.DB'DE YERI YOKTUR
+
+request icindeki bilgiler dto objesi ile aliniyor
+                Service katmani dto objesindeki bilgileri aliyor,
+                    asil objemiz olan entity objesinin fieldlarina mapliyor,
+                    repositorye yonlendiriyor
+
+
+read islemi icin: dbden repositorye obje entity olarak verilir,
+                    repository service e entity olarak verir,
+                    Service katmani entity icerisinden gerekli bilgileri alir dto ya mapler,
+                        controller a dto yu doner
+
+
+dto kullanmanin avantajlari:
+1- security (client service e kadar ulasabiliyor)
+2- Hiz  (daha buyuk veriyi tasimak yerine daha kucuk bir veriyi tasimis oluyoruz)
+
+
+
+
+
+================    Spring Boot Actuator    =======================================
+
+Uygulamamiz canlidayken uygulama hakkinda bilgi almamizi saglar
+sistem degiskenleri nelerdir vs gozlem yapabilmek icin kullanilir
+
+Base path: /actuator
+        /info
+        /health
+        /threaddump
+        /trace
+        /beans
+        /loggers
+        /env
+
+
+
+
+
+
